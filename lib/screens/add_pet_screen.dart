@@ -19,22 +19,15 @@ class _AddPetScreenState extends State<AddPetScreen> {
   final TextEditingController _nameController = TextEditingController();
   final TextEditingController _breedController = TextEditingController();
   final TextEditingController _ageController = TextEditingController();
-  final TextEditingController _guardianController = TextEditingController();
   final TextEditingController _vaccinatedController = TextEditingController();
   final TextEditingController _locationController = TextEditingController();
   final TextEditingController _aboutController = TextEditingController();
   final TextEditingController _imageUrlController = TextEditingController();
 
   String _sex = 'Macho';
-  String _size = 'Porte médio';
   String _neutered = 'Sim';
 
   static const _sexOptions = <String>['Macho', 'Fêmea'];
-  static const _sizeOptions = <String>[
-    'Porte pequeno',
-    'Porte médio',
-    'Porte grande',
-  ];
   static const _neuteredOptions = <String>['Sim', 'Não'];
 
   @override
@@ -42,7 +35,6 @@ class _AddPetScreenState extends State<AddPetScreen> {
     _nameController.dispose();
     _breedController.dispose();
     _ageController.dispose();
-    _guardianController.dispose();
     _vaccinatedController.dispose();
     _locationController.dispose();
     _aboutController.dispose();
@@ -57,11 +49,9 @@ class _AddPetScreenState extends State<AddPetScreen> {
     final pet = Pet(
       name: _nameController.text.trim(),
       sex: _sex,
-      size: _size,
       breed: _breedController.text.trim(),
       age: _ageController.text.trim(),
       neutered: _neutered,
-      guardian: _guardianController.text.trim(),
       vaccinated: _vaccinatedController.text.trim(),
       location: _locationController.text.trim(),
       about: _aboutController.text.trim(),
@@ -145,13 +135,6 @@ class _AddPetScreenState extends State<AddPetScreen> {
                   onChanged: (value) => setState(() => _sex = value!),
                 ),
                 const SizedBox(height: 12),
-                _buildDropdown(
-                  label: 'Porte',
-                  value: _size,
-                  items: _sizeOptions,
-                  onChanged: (value) => setState(() => _size = value!),
-                ),
-                const SizedBox(height: 12),
                 TextFormField(
                   controller: _breedController,
                   decoration: const InputDecoration(
@@ -186,21 +169,6 @@ class _AddPetScreenState extends State<AddPetScreen> {
                   value: _neutered,
                   items: _neuteredOptions,
                   onChanged: (value) => setState(() => _neutered = value!),
-                ),
-                const SizedBox(height: 12),
-                TextFormField(
-                  controller: _guardianController,
-                  decoration: const InputDecoration(
-                    labelText: 'Responsável',
-                    border: OutlineInputBorder(),
-                    prefixIcon: Icon(Icons.person_outline),
-                  ),
-                  validator: (value) {
-                    if (value == null || value.trim().isEmpty) {
-                      return 'Informe o responsável';
-                    }
-                    return null;
-                  },
                 ),
                 const SizedBox(height: 12),
                 TextFormField(

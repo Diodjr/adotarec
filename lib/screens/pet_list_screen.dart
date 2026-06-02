@@ -184,11 +184,9 @@ class _PetListScreenState extends State<PetListScreen> {
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
                         _detailLine('Sexo:', pet.sex),
-                        _detailLine('Porte:', pet.size),
                         _detailLine('Raça:', pet.breed),
                         _detailLine('Idade:', pet.age),
                         _detailLine('Castrado:', pet.neutered),
-                        _detailLine('Responsável:', pet.guardian),
                         _detailLine('Vacinado:', pet.vaccinated),
                         _detailLine('Localização:', pet.location),
                         const SizedBox(height: 14),

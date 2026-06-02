@@ -15,11 +15,9 @@ class ApiService {
     const Pet(
       name: 'Oreo',
       sex: 'Macho',
-      size: 'Porte médio',
       breed: 'SRD (vira-lata)',
       age: '2 anos',
       neutered: 'Sim',
-      guardian: 'ONG Patinhas do Recife',
       vaccinated: 'Sim (V10 e antirrábica)',
       location: 'Recife - PE',
       about:
@@ -34,11 +32,9 @@ class ApiService {
     const Pet(
       name: 'Luna',
       sex: 'Fêmea',
-      size: 'Porte pequeno',
       breed: 'Poodle',
       age: '1 ano e 4 meses',
       neutered: 'Sim',
-      guardian: 'Abrigo Lar Animal',
       vaccinated: 'Sim',
       location: 'Jaboatão dos Guararapes - PE',
       about:
@@ -52,11 +48,9 @@ class ApiService {
     const Pet(
       name: 'Mingau',
       sex: 'Macho',
-      size: 'Porte pequeno',
       breed: 'Gato SRD',
       age: '8 meses',
       neutered: 'Não',
-      guardian: 'Projeto Adota Gato',
       vaccinated: 'Primeira dose aplicada',
       location: 'Olinda - PE',
       about:
@@ -68,4 +62,3 @@ class ApiService {
     ),
   ];
 }
-
