@@ -51,17 +51,9 @@ class _ProtetorRegisterScreenState extends State<ProtetorRegisterScreen> {
               const SizedBox(height: 12),
               const TextField(
                 decoration: InputDecoration(
-                  labelText: 'CPF',
+                  labelText: 'Número de WhatsApp',
                   border: OutlineInputBorder(),
-                  prefixIcon: Icon(Icons.badge),
-                ),
-              ),
-              const SizedBox(height: 12),
-              const TextField(
-                decoration: InputDecoration(
-                  labelText: 'Telefone / WhatsApp',
-                  border: OutlineInputBorder(),
-                  prefixIcon: Icon(Icons.phone),
+                  prefixIcon: Icon(Icons.chat),
                 ),
               ),
               const SizedBox(height: 12),

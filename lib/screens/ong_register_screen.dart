@@ -139,9 +139,9 @@ class _OngRegisterScreenState extends State<OngRegisterScreen> {
               const SizedBox(height: 12),
               const TextField(
                 decoration: InputDecoration(
-                  labelText: 'Telefone / WhatsApp',
+                  labelText: 'Número de WhatsApp',
                   border: OutlineInputBorder(),
-                  prefixIcon: Icon(Icons.phone),
+                  prefixIcon: Icon(Icons.chat),
                 ),
               ),
               const SizedBox(height: 12),
